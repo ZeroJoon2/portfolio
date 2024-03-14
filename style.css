@@ -1,0 +1,250 @@
+/* styles.css */
+
+body, html {
+    font-family: 'Noto Sans KR ExtraBold', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
+
+/* Base styles */
+.container {
+    width: 100%; /* Use percentage for responsive width */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* Responsive text size */
+.text-responsive {
+    font-size: calc(1em + 1vw); /* Increase font size as the viewport width increases */
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Add padding on smaller screens */
+    }
+
+    .text-responsive {
+        font-size: calc(1em + 0.5vw); /* Smaller increase in font size on smaller screens */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .text-responsive {
+        font-size: 1em; /* Fixed font size on very small screens */
+    }
+}
+
+.visitor-counts{
+    color: #4a67d8;
+}
+/* 상단 네이게이션바*/
+.navigation-menu{
+    color:#4a67d8;
+}
+
+.float-nav {
+    position: fixed;
+    right: 150px;
+    top: 70%;
+    transform: translateY(-50%);
+    background:#4a67d8;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.float-nav .nav-link {
+    font-family: 'Noto Sans', sans-serif;
+    display: block;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.float-nav .nav-link:hover,
+.float-nav .nav-link.active {
+    background-color: white;
+    color: #000000;
+    border-radius: 10px;
+}
+
+
+
+a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+color: #4a67d8; /* Change to your preferred hover color */
+}
+
+a::after {
+content: '';
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: -5px;
+left: 0%;
+background-color: #4a67d8; /* Match hover color */
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover::after {
+visibility: visible;
+transform: scaleX(1);
+}
+
+/* Custom CSS for hover effects */
+.hover-reveal {
+    position: relative;
+    overflow: hidden;
+}
+/* 이미지 호버 */
+.hover-reveal img {
+    transition: transform 0.8s ease, opacity 1.5s ease; /* Add transition for opacity */
+    transform: scale(0); /* Start with the image scaled down */
+    opacity: 0; /* Start with the image fully transparent */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Adjust width as needed */
+}
+.hover-reveal:hover img {
+    transform: scale(1); /* Scale the image to its normal size on hover */
+    opacity: 1; /* Make the image fully opaque on hover */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays behind the content */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.introduction-title{
+    font-size: 40px; /* Adjust the size as desired */
+    color: #FFFFFF; /* Replace #yourColorCode with your desired color code */
+}
+
+.introduction-content{
+    position: relative; /* Ensure content is above the video */
+    z-index: 1;
+    color: #FFFFFF; /* Replace #yourColorCode with your desired color code */
+}
+
+.introduction-to-Past{
+    padding: 15%;
+    font-size: 30px; /* Adjust the size as desired */
+    text-align: center;
+    color:#000000;
+
+}
+.year-container .year-image {
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+
+.year-container:hover .year-image {
+    display: block;
+}
+.email-text {
+    font-size: 20px; /* Adjust the size as desired */
+    font-weight: bold; /* Makes the email address more prominent */
+}
+
+.email-icon {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio of the icon */
+    margin-bottom: 0.5rem; /* Adds some space below the icon */
+}
+button, a.button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover, a.button:hover {
+background-color: #4a67d8; /* Change to your preferred hover color */
+transform: translateY(-2px); /* Slightly raise the button */
+}
+
+button:active, a.button:active {
+transform: translateY(1px); /* Press down effect on click */
+}
+
+
+.line-for-title-past {
+    height: 3px; /* 선의 높이 */
+    background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
+    width: 19%; /* 선의 너비, 필요에 따라 조정 가능 */
+    margin-top: 8px; /* 'My Past' 텍스트와 선 사이의 간격 */
+}
+
+.line-for-title-future {
+    height: 3px; /* 선의 높이 */
+    background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
+    width: 23%; /* 선의 너비, 필요에 따라 조정 가능 */
+    margin-top: 8px; /* 'My Future' 텍스트와 선 사이의 간격 */
+}
+
+.Introduction-content {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.Introduction {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.clickable-logo {
+    cursor: pointer; /* Indicates the logo is clickable */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.ContactContainer{
+    padding: 0%;
+    margin: 0%;
+}
+
+.ContactMe{
+    margin: 0%;
+}
+
+.logoContainer{
+    margin: 0%;
+    padding: 0%;
+}
+
+.website-copyright{
+    color: #000000;
+
+}
