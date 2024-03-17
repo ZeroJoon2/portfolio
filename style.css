@@ -51,8 +51,8 @@ body, html {
 
 .float-nav {
     position: fixed;
-    right: 150px;
-    top: 70%;
+    right: 10%;
+    top: 60%;
     transform: translateY(-50%);
     background:#4a67d8;
     border-radius: 10px;
@@ -167,14 +167,44 @@ transform: scaleX(1);
     color:#000000;
 
 }
-.year-container .year-image {
+.year-container .year-image .futurecontainer{
     display: none;
-    transition: display 0.5s ease-in-out;
+    transition: display 0.8s ease-in-out;
 }
 
 .year-container:hover .year-image {
     display: block;
 }
+.text-color {
+    color: rgb(255, 166, 2); /* 빨간색 지정 */
+    font-size: 20px;
+}
+
+.hover-target {
+    position: relative;
+    overflow: hidden;
+    justify-content: center
+    
+}
+
+.hover-message {
+    position: absolute;
+    width: 90%; /* 문구의 너비를 부모 컨테이너의 너비로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    bottom: 10px; /* 하단에서 50%의 위치에 배치 */
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 색상 */
+    color: white; /* 텍스트 색상 */
+    padding: 5px 0; /* 패딩 */
+    opacity: 0; /* 기본적으로는 보이지 않도록 설정 */
+    transition: transform 0.8s ease, opacity 1.5s ease; /* Add transition for opacity */
+}
+
+.hover-target:hover .hover-message {
+    opacity: 1;
+}
+
+
+
 .email-text {
     font-size: 20px; /* Adjust the size as desired */
     font-weight: bold; /* Makes the email address more prominent */
@@ -203,14 +233,14 @@ transform: translateY(1px); /* Press down effect on click */
 .line-for-title-past {
     height: 3px; /* 선의 높이 */
     background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
-    width: 19%; /* 선의 너비, 필요에 따라 조정 가능 */
+    width: 26%; /* 선의 너비, 필요에 따라 조정 가능 */
     margin-top: 8px; /* 'My Past' 텍스트와 선 사이의 간격 */
 }
 
 .line-for-title-future {
     height: 3px; /* 선의 높이 */
     background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
-    width: 23%; /* 선의 너비, 필요에 따라 조정 가능 */
+    width: 34%; /* 선의 너비, 필요에 따라 조정 가능 */
     margin-top: 8px; /* 'My Future' 텍스트와 선 사이의 간격 */
 }
 
@@ -228,7 +258,10 @@ transform: translateY(1px); /* Press down effect on click */
 .clickable-logo {
     cursor: pointer; /* Indicates the logo is clickable */
     transition: transform 0.3s ease; /* Smooth transition for scaling */
+    animation: pulse 1s infinite; /* Apply the pulse animation */
 }
+
+
 
 .ContactContainer{
     padding: 0%;
