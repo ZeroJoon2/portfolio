@@ -233,14 +233,14 @@ transform: translateY(1px); /* Press down effect on click */
 .line-for-title-past {
     height: 3px; /* 선의 높이 */
     background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
-    width: 26%; /* 선의 너비, 필요에 따라 조정 가능 */
+    width: 21%; /* 선의 너비, 필요에 따라 조정 가능 */
     margin-top: 8px; /* 'My Past' 텍스트와 선 사이의 간격 */
 }
 
 .line-for-title-future {
     height: 3px; /* 선의 높이 */
     background-color: #4a67d8; /* 선의 색상, 원하는 색상으로 변경 가능 */
-    width: 34%; /* 선의 너비, 필요에 따라 조정 가능 */
+    width: 27%; /* 선의 너비, 필요에 따라 조정 가능 */
     margin-top: 8px; /* 'My Future' 텍스트와 선 사이의 간격 */
 }
 

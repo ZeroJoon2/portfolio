@@ -29,6 +29,14 @@ const yearMessages = {
     // 각 연도에 대한 문구를 추가...
 };
 
+const futureMessages = {
+    2029: '34살 : <span class="text-color">사업 운영</span>과 <span class="text-color">가족 형성</span>',
+    2034: '39살 : <span class="text-color">가족</span>과 <span class="text-color">자유로운 삶</span>',
+    2044: '49살 : <span class="text-color">승승장구</span>하는 <span class="text-color">사업</span>과 <span class="text-color">건강한 가족</span>',
+    2054: '59살 : <span class="text-color">박수</span> 받는 <span class="text-color"> 은퇴 </span>'
+    // Add more years and messages as needed...
+};
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const yearsContainer = document.getElementById("yearsContainer");
@@ -61,12 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
         let futureElement = document.createElement("div");
         futureElement.classList.add("p-4", "lg:w-1/2", "md:w-full", "hover-reveal");
         futureElement.innerHTML = `
-        <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative hover-target">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">${milestone} Years (${futureYear})</h2>
-                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Vision for ${futureYear}</h1>
-                <p class="leading-relaxed mb-3">Where I see myself in ${milestone} years.</p>
-                <img src="images/future/${milestone}-years.jpg" alt="Vision for ${futureYear}" class="mt-3">
-            </div>
+            <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative hover-target">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">ヽ（≧□≦）ノ</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">${futureYear}년 후, 나의 모습</h1>
+            <p class="leading-relaxed mb-3">마우스를 올려 확인해보세요 !</p>
+            <img src="images/future/${milestone}-years.jpg" alt="Vision for ${futureYear}" class="mt-3 hover-image">
+            <div class="hover-message">${futureMessages[futureYear]}</div>
+        </div>
         `;
         futureContainer.appendChild(futureElement);
     });
